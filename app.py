@@ -24,4 +24,4 @@ if st.button('Predict'):
     # Reshape the input data to match the model's requirements
     input_data = np.array(input_data).reshape(1, -1)
     prediction = loaded_model.predict(input_data)
-    st.write(f"Predicted Output is  :> {'<  Malignant [1] >' if prediction[0] == 1 else '  Benign [0]'}")
+    st.write(f"Predicted Output is  :> {'The tumor is Benign...' if prediction[0] == 1 else 'The tumor is Malignan... '}")
